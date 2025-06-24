@@ -21,7 +21,7 @@ const Header = () => {
         <img
           src="/icons/tsl-gold.png"
           alt=""
-          className="w-16 h-16"
+          className="h-10 w-10 md:w-16 md:h-16"
         />
 
         {/* Desktop Nav */}
@@ -40,7 +40,7 @@ const Header = () => {
             </NavLink>
           ))}
           <NavLink
-            to="/donate"
+            to="/donation"
             className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition"
           >
             Donate
@@ -72,7 +72,7 @@ const Header = () => {
               </NavLink>
             ))}
             <NavLink
-              to="/donate"
+              to="/donation"
               className="bg-blue-600 text-white px-4 py-2 rounded-md text-center hover:bg-blue-700"
               onClick={() => setMenuOpen(false)}
             >

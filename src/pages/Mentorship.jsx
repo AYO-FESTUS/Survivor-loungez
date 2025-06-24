@@ -1,9 +1,103 @@
-import React from 'react'
+import React from "react";
+import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa6";
+import { mentorDuties } from "../lib/mentorDuties";
+import { skillEnhancements } from "../lib/skillEnhancement";
+import Subscribe from "../components/Subscribe";
 
 const Mentorship = () => {
   return (
-    <div>Mentorship</div>
-  )
-}
+    <section className="w-full min-h-screen flex flex-col items-center">
+      <div className="relative w-full h-52 bg-cover bg-no-repeat bg-center bg-[url('/images/mentors.jpg')] md:h-96">
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+        <div className="relative z-10 flex flex-col items-center justify-center h-full">
+          <h2 className="font-bold text-4xl mt-4 text-blue-100 text-center md:text-5xl">
+            A Stronger You, With Support
+          </h2>
+          <p className="mt-2 md:mt-4 text-white text-lg">
+            You don't have to walk alone
+          </p>
+        </div>
+      </div>
 
-export default Mentorship
+      <div className="w-full px-8 py-10 flex items-center justify-center gap-10">
+        <img
+          src="/images/ment.jpeg"
+          alt="mentorship session"
+          className="hidden md:block w-[43%] h-[18rem]"
+          loading="lazy"
+        />
+        <div className="md:w-[43%] py-10 relative">
+          <FaQuoteLeft className="text-4xl text-blue-500 absolute left-0 top-12 transform -translate-y-1/2" />
+          <p className="text-lg text-gray-700 max-w-2xl mx-auto px-4 py-8 relative z-10">
+            At The Survivors Lounge CIC, we believe healing happens not just
+            through services, but through connection. Our mentorship programme
+            pairs survivors and individuals facing personal adversity with
+            trusted mentors who walk with them — not ahead of them. Whether
+            you're finding your footing after trauma, stepping into
+            independence, or just needing someone who understands, a mentor can
+            make all the difference.
+          </p>
+          <FaQuoteRight className="text-4xl text-blue-500 absolute right-6 bottom-4 transform -translate-y-1/2" />
+        </div>
+      </div>
+
+      <h3 className="font-bold text-2xl">What Mentors Do</h3>
+
+      <div className="w-full h-fit px-4 mt-6 sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        {mentorDuties.map((duty) => (
+          <div
+            key={duty.id}
+            className="w-full h-fit px-4 py-6 rounded-2xl bg-gray-100 mb-4 border-dashed border-1 border-gray-300 hover:shadow-lg transition duration-300"
+          >
+            <img
+              className="w-full h-40 rounded-lg"
+              src={duty.img}
+              alt=""
+            />
+            <h4 className="font-semibold mt-4 text-lg">{duty.title}</h4>
+          </div>
+        ))}
+      </div>
+
+      <button className="bg-blue-600 text-white px-5 py-2 rounded-md hover:bg-blue-700 transition mb-4 mt-5">
+        Get a Mentor
+      </button>
+
+      <p className='my-4 text-center px-2'>Interested in becoming a mentor to help others find their way? <a className='no-underline text-blue-600 font-italic hover:underline cursor-pointer'>Become a Volunteer</a></p>
+
+      
+
+      <h3 className="font-bold mt-4 text-2xl text-center">
+        Our Skill Enhancement Program
+      </h3>
+      <div className="w-full h-fit px-8 mt-2">
+        <p className="">
+          Our future plans include launching practical skills development
+          sessions to help survivors gain confidence, employment readiness and
+          financial independence.
+        </p>
+        <p className="text-gray-600 mt-2">What to expect:</p>
+
+        <div className="w-full h-fit md:grid grid-cols-3 mt-6 gap-4">
+          {skillEnhancements.map((enhancement) => {
+            const Icon = enhancement.icon;
+            return (
+              <div
+                key={enhancement.title}
+                className="w-full h-fit px-4 py-3 rounded-2xl bg-blue-300 mb-4 border-3 border-blue-600 hover:shadow-lg transition duration-300 flex items-center justify-start gap-4 md:py-6"
+              >
+                <div className="border-2 border-blue-600 rounded-lg p-3">
+                  <Icon className={`text-3xl ${enhancement.color}`} />
+                </div>
+                <h4 className="font-semibold text-lg">{enhancement.title}</h4>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+      <Subscribe />
+    </section>
+  );
+};
+
+export default Mentorship;
