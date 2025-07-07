@@ -52,7 +52,7 @@ import About from "./pages/About";
 import Blog from "./pages/Blog";
 import Donation from "./pages/Donation";
 import Mentorship from "./pages/Mentorship";
-
+import BlogPost from "./pages/BlogPost";
 
 
 const router = createBrowserRouter([
@@ -64,8 +64,9 @@ const router = createBrowserRouter([
       { path: "about", element: <About /> },
       { path: "blog", element: <Blog /> },
       { path: "donation", element: <Donation /> },
+       { path: "blog/:slug", element: <BlogPost /> },
       { path: "mentorship", element: <Mentorship  /> },
-  
+
       { path: "*", element: <h1>404 - Page Not Found</h1> },
     ],
   },

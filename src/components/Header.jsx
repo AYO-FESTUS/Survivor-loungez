@@ -21,7 +21,7 @@ const Header = () => {
       <div className="max-w-7xl mx-auto pr-4 flex items-center justify-between">
         {/* <div className="h-16 w-16 bg-contain bg-no-repeat bg-center bg-[url('/logos/gold-logo.jpg')] border-2"> */}
           <img
-            src="/logos/logo-no-bg.png"
+            src="\logos\TSL LOGO 2.png"
             alt=""
             className="h-20 w-24 md:w-16 md:h-16"
           />
