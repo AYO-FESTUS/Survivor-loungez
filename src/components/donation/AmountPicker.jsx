@@ -50,17 +50,17 @@ export default function DonationAmountPicker() {
 
   return (
     <div className="w-full h-fit mt-4 flex flex-col items-center px-4 font-sans">
-      <h3 className="text-lg font-bold mb-3 md:text-2xl mt-4">
+      <h3 className="text-lg font-bold mb-3 md:text-2xl mt-4 text-gray-100">
         Select an Amount to Donate
       </h3>
 
       {/* Currency Toggle */}
       <div className="mb-4 flex items-center">
-        <label className="font-medium text-sm mr-3 md:text-xl">
+        <label className="font-medium text-sm mr-3 md:text-xl text-gray-100">
           Choose Currency:
         </label>
 
-        <p className="md:text-xl">
+        <p className="md:text-xl text-gray-100">
           {" "}
           USD{" "}
           <input
@@ -72,9 +72,10 @@ export default function DonationAmountPicker() {
           />
         </p>
 
-        <p className="ml-4 md:text-xl">
+        <p className="ml-4 md:text-xl text-gray-100">
           NGN{" "}
           <input
+            className="bg-[#B89B5E]"
             type="radio"
             name="currency"
             value="NGN"
@@ -92,8 +93,8 @@ export default function DonationAmountPicker() {
             onClick={() => handlePresetClick(amount)}
             className={`px-4 py-2 rounded md:text-xl ${
               selectedAmount == amount && !customInputVisible
-                ? "bg-blue-600 text-white"
-                : "text-white bg-black"
+                ? "bg-[#B89B5E] text-white"
+                : "text-black bg-white"
             }`}
           >
             {displaySymbol}
@@ -104,8 +105,8 @@ export default function DonationAmountPicker() {
           onClick={handleCustomClick}
           className={`px-4 py-2 rounded ${
             customInputVisible
-              ? "bg-blue-600 text-white"
-              : "text-white bg-black"
+              ? "bg-[#B89B5E]  text-white"
+              : "text-black bg-white"
           }`}
         >
           {displaySymbol}Custom
@@ -117,7 +118,7 @@ export default function DonationAmountPicker() {
         <div className="mb-4 w-full">
           <label
             htmlFor="customAmount"
-            className="block mb-1 text-sm font-medium md:text-xl"
+            className="block mb-1 text-sm font-medium md:text-xl text-gray-100"
           >
             Enter Custom Amount:
           </label>
@@ -128,15 +129,15 @@ export default function DonationAmountPicker() {
             value={customAmount}
             onChange={handleCustomAmountChange}
             placeholder={`Enter amount in ${currency}`}
-            className="w-full border rounded px-3 py-2"
+            className="w-full border-gray-100 rounded px-3 py-2"
           />
         </div>
       )}
 
       {/* Selected Amount Display */}
-      <p className="text-base">
+      <p className="text-base text-gray-100">
         <strong>You are donating</strong>{" "}
-        <span className="text-blue-700">
+        <span className="text-[#B89B5E] ">
           {selectedAmount
             ? `${displaySymbol}${selectedAmount}`
             : `${displaySymbol}0`}
@@ -145,13 +146,13 @@ export default function DonationAmountPicker() {
       </p>
 
       {/* Optional Message */}
-      <p className="self-start font-bold mt-4 mb-2 md:self-center md:text-xl">
+      <p className="self-start font-bold mt-4 mb-2 md:self-center md:text-xl text-gray-100">
         Have something to say to us?
       </p>
       <textarea
         name="donationMessage"
         id="donationMessage"
-        className="w-full border-gray-700 border-2 rounded px-3 py-2 resize-none h-[6rem] md:w-1/3"
+        className="w-full border-gray-100 border-2 rounded px-3 py-2 resize-none h-[6rem] md:w-1/3"
         placeholder="Add a message (optional)"
       ></textarea>
 

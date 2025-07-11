@@ -2,7 +2,7 @@ import DonationAmountPicker from "../components/donation/AmountPicker";
 
 const Donation = () => {
   return (
-    <section className="w-full min-h-screen flex flex-col items-center">
+    <section className="w-full min-h-screen flex flex-col items-center bg-black">
       <div className="relative w-full h-52 bg-cover bg-no-repeat bg-center bg-[url('/images/therapy.jpg')] md:h-96">
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
         <div className="relative z-10 flex flex-col items-center justify-center h-full">

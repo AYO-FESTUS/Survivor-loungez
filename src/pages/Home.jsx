@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
   import { motion } from "framer-motion";
+import TestimonialCarousel from "../components/home/Testimonials";
 
 import {
   FaHandsHelping,
@@ -28,7 +29,7 @@ const Home = () => {
     return () => clearInterval(interval);
   }, []);
   return (
-    <div className="font-poppins">
+    <div className="font-poppins bg-black">
       {/* Hero Section */}
       <section className="relative w-full h-[90vh]">
         <img
@@ -167,21 +168,23 @@ const Home = () => {
     </h2>
 
     <div className="space-y-12 text-left">
-      {/* Testimonial 1 */}
+
+      <TestimonialCarousel/>
+      {/* Testimonial 1
       <div className="bg-gray-900 rounded-2xl p-6 shadow-lg">
         <p className="text-white text-base italic mb-4">
           “When I left my abusive marriage, I had nowhere to go and didn’t know how to start over in the UK. The Survivor’s Lounge helped me regain my confidence and guided me in understanding my rights. Now I am building a new life for myself and my children.”
         </p>
         <p className="text-[#B89B5E] font-semibold">– Anonymous, 36</p>
-      </div>
+      </div> */}
 
       {/* Testimonial 2 */}
-      <div className="bg-gray-900 rounded-2xl p-6 shadow-lg">
+      {/* <div className="bg-gray-900 rounded-2xl p-6 shadow-lg">
         <p className="text-white text-base italic mb-4">
           “I met the founder in 2021 when she visited a place I was hiding. My encounter with her and her guidance has reshaped my life, such that I am now back in school, living my desired dream and helping others find their path while I complete my studies as a Nurse.”
         </p>
         <p className="text-[#B89B5E] font-semibold">– Male Survivor, 38</p>
-      </div>
+      </div> */}
     </div>
   </div>
 </section>
@@ -235,7 +238,7 @@ const Home = () => {
   </div>
 </section>
 
-<section className="bg-black py-16">
+{/* <section className="bg-black py-16">
   <div className="max-w-4xl mx-auto px-4 text-center">
     <h2 className="text-4xl font-bold text-[#B89B5E] mb-8">Contact</h2>
 
@@ -248,8 +251,8 @@ const Home = () => {
       ✉️ <a href="mailto:support@thesurvivorslounge.com" className="underline hover:text-[#B89B5E] transition">support@thesurvivorslounge.com</a>
     </p>
 
-    <p className="text-white text-lg mb-8">
-      📞 <a href="tel:+44XXXXXXXXXX" className="underline hover:text-[#B89B5E] transition">+44…….</a>
+    <p className="text-white text-lg mb-8"> */}
+      {/* 📞 <a href="tel:+44XXXXXXXXXX" className="underline hover:text-[#B89B5E] transition">+44…….</a>
     </p>
 
     <div className="flex justify-center space-x-6">
@@ -263,8 +266,8 @@ const Home = () => {
       <a
         href="#"
         aria-label="Instagram"
-        className="text-white hover:text-[#B89B5E] transition text-2xl"
-      >
+        className="text-white hover:text-[#B89B5E] transition text-2xl" */}
+      {/* >
         Instagram
       </a>
       <a
@@ -276,7 +279,7 @@ const Home = () => {
       </a>
     </div>
   </div>
-</section>
+</section> */}
 
 
       <Subscribe />

@@ -11,13 +11,13 @@ const Subscribe = () => {
   };
 
   return (
-    <div className="w-full max-w-md mx-auto p-4 rounded shadow">
-      <h3 className="text-xl font-semibold mb-2 text-center">
+    <div className="w-full max-w-md mx-auto p-4 rounded shadow bg-black">
+      <h3 className="text-xl font-semibold mb-2 text-center text-gray-100">
         Stay tuned for Updates by signing up for our Newsletter
       </h3>
       <form
         onSubmit={handleSubmit}
-        className="w-full flex gap-3  items-center justify-center"
+        className="w-full flex gap-3  items-center justify-center mb-4"
       >
         <input
           type="email"
@@ -29,7 +29,7 @@ const Subscribe = () => {
         />
         <button
           type="submit"
-          className="w-[26%] bg-blue-600 text-white px-3 py-2 rounded hover:bg-blue-700 transition cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-[26%] bg-[#B89B5E] text-white md:px-3 py-2 rounded hover:bg-[#B89B5E]/70 transition cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
         >
           Subscribe
         </button>

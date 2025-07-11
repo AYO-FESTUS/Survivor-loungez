@@ -17,13 +17,13 @@ const Header = () => {
   ];
 
   return (
-    <header className="bg-white shadow-md sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto pr-4 flex items-center justify-between">
+    <header className="bg-black shadow-md sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
         {/* <div className="h-16 w-16 bg-contain bg-no-repeat bg-center bg-[url('/logos/gold-logo.jpg')] border-2"> */}
           <img
             src="\logos\TSL LOGO 2.png"
             alt=""
-            className="h-20 w-24 md:w-16 md:h-16"
+            className="h-13 w-26 md:w-16 md:h-16"
           />
         {/* </div> */}
 
@@ -34,7 +34,7 @@ const Header = () => {
               key={item.name}
               to={item.path}
               className={({ isActive }) =>
-                `text-gray-700 hover:text-blue-600 transition ${
+                `text-gray-100 hover:text-[#B89B5E]/50 transition ${
                   isActive ? "font-bold underline" : ""
                 }`
               }
@@ -44,7 +44,7 @@ const Header = () => {
           ))}
           <NavLink
             to="/donation"
-            className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition"
+            className="bg-[#B89B5E] text-gray-100 px-4 py-2 rounded-md hover:bg-[#B89B5E]/50 transition"
           >
             Donate
           </NavLink>
@@ -52,7 +52,7 @@ const Header = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-gray-700"
+          className="md:hidden text-gray-100"
           onClick={toggleMenu}
           aria-label="Toggle Menu"
         >
@@ -68,7 +68,7 @@ const Header = () => {
               <NavLink
                 key={item.name}
                 to={item.path}
-                className="text-gray-700 hover:text-blue-600"
+                className="text-gray-100 hover:text-[#B89B5E]/70 transition py-2"
                 onClick={() => setMenuOpen(false)}
               >
                 {item.name}
@@ -76,7 +76,7 @@ const Header = () => {
             ))}
             <NavLink
               to="/donation"
-              className="bg-blue-600 text-white px-4 py-2 rounded-md text-center hover:bg-blue-700"
+              className="bg-[#B89B5E] text-white px-4 py-2 rounded-md text-center hover:bg-[#B89B5E]/50"
               onClick={() => setMenuOpen(false)}
             >
               Donate
