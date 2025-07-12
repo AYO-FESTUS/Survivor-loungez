@@ -47,7 +47,7 @@ const Mentorship = () => {
         {mentorDuties.map((duty) => (
           <div
             key={duty.id}
-            className="w-full h-fit px-4 py-6 rounded-2xl bg-[#B89B5E]/60  mb-4 border-dashed border-1 border-[#B89B5E]  hover:shadow-lg transition duration-300"
+            className="w-full h-fit px-4 py-6 rounded-2xl bg-[#B89B5E]/60  mb-4 border-dashed border-1 border-[#B89B5E]  hover:shadow-lg transition duration-300 md:h-[19rem]"
           >
             <img
               className="w-full h-40 rounded-lg"
@@ -67,11 +67,10 @@ const Mentorship = () => {
 
       <p className="my-4 text-center px-2 text-gray-100 ">
         Interested in becoming a mentor to help others find their way?{" "}
-        <a className="no-underline text-[#B89B5E] font-italic hover:underline cursor-pointer">
-          Become a Volunteer
-        </a>
       </p>
-
+      <a className="no-underline text-[#B89B5E] font-italic hover:underline cursor-pointer mb-2">
+        Become a Volunteer
+      </a>
       <h3 className="font-bold mt-4 text-2xl text-center text-[#B89B5E] ">
         Our Skill Enhancement Program
       </h3>
@@ -83,13 +82,13 @@ const Mentorship = () => {
         </p>
         <p className="text-gray-300 mt-2">What to expect:</p>
 
-        <div className="w-full h-fit md:grid grid-cols-3 mt-6 gap-4">
+        <div className="w-full h-fit md:grid grid-cols-3 mt-6 gap-4 ">
           {skillEnhancements.map((enhancement) => {
             const Icon = enhancement.icon;
             return (
               <div
                 key={enhancement.title}
-                className="w-full h-fit px-4 py-3 rounded-2xl bg-[#B89B5E]/70 border-[#B89B5E]  mb-4 border-3 hover:shadow-lg transition duration-300 flex items-center justify-start gap-4 md:py-6"
+                className="w-full h-fit md:h-[7rem] px-4 py-3 rounded-2xl bg-[#B89B5E]/70 border-[#B89B5E]  mb-4 border-3 hover:shadow-lg transition duration-300 flex items-center justify-start gap-4 md:py-6"
               >
                 <div className="border-2 border-[#B89B5E] rounded-lg p-3">
                   <Icon className={`text-3xl ${enhancement.color}`} />

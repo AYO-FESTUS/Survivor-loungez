@@ -1,10 +1,19 @@
 // src/components/Header.jsx
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
@@ -13,18 +22,23 @@ const Header = () => {
     { name: "About", path: "/about" },
     { name: "Blog", path: "/blog" },
     { name: "Mentorship", path: "/mentorship" },
-   
   ];
 
   return (
-    <header className="bg-black shadow-md sticky top-0 z-50">
+    <header
+      className={`sticky top-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-black/40 backdrop-blur-md shadow-lg"
+          : "bg-black shadow-md"
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
         {/* <div className="h-16 w-16 bg-contain bg-no-repeat bg-center bg-[url('/logos/gold-logo.jpg')] border-2"> */}
-          <img
-            src="\logos\TSL LOGO 2.png"
-            alt=""
-            className="h-13 w-26 md:w-16 md:h-16"
-          />
+        <img
+          src="/logos/TSL LOGO 2.png"
+          alt=""
+          className="h-13 w-26 md:w-22 md:h-14"
+        />
         {/* </div> */}
 
         {/* Desktop Nav */}

@@ -61,7 +61,7 @@ const Blog = () => {
   ];
 
   return (
-    <div className="w-full">
+    <div className="w-full bg-black">
       {/* Hero Section */}
       <section className="relative w-full h-52 md:96">
         <img
@@ -101,7 +101,7 @@ const Blog = () => {
           return (
             <div
               key={index}
-              className="bg-[#B89B5E]/70 shadow-md rounded p-4 mb-6"
+              className="bg-[#B89B5E]/70 shadow-md rounded p-4 mb-6 border-2"
             >
               {post.imageUrl && (
                 <img

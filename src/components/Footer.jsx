@@ -1,4 +1,11 @@
-import { FaLinkedin, FaInstagram, FaFacebook, FaPhone, FaMailBulk, FaBuilding } from "react-icons/fa";
+import {
+  FaLinkedin,
+  FaInstagram,
+  FaFacebook,
+  FaPhone,
+  FaBuilding,
+} from "react-icons/fa";
+import { IoMdMail } from "react-icons/io";
 import { FaLocationPin } from "react-icons/fa6";
 
 const Footer = () => {
@@ -6,11 +13,11 @@ const Footer = () => {
     <footer className="bg-[#B89B5E] text-black py-6 w-full h-fit flex flex-col items-center">
       <footer className=" px-4 h-fit flex flex-col items-center gap-6 md:flex-row md:items-start relative md:pb-10 md:justify-center">
         <div className="w-full flex h-fit md:w-[45%]">
-          <img
+          {/* <img
             src="/logos/logo-no-bg.png"
             alt=""
             className="h-30 w-28 hidden md:w-40 md:mr-12 md:ml-4 md:mt-2  md:h-30 -ml-4 bg-black rounded-[1rem] shadow-xl"
-          />
+          /> */}
           <address className="not-italic text-sm flex flex-col justify-start md:-ml-4">
             <p className="text-lg font-bold mb-1 tracking-wide md:text-2xl md:mb-2 md:font-semibold">
               The Survivors Lounge CIC
@@ -20,7 +27,7 @@ const Footer = () => {
               Greater London, United Kingdom.
             </p>
             <p className="[word-spacing:0.1em] mb-1 tracking-wide md:text-[1.1rem] md:mb-2 flex items-center gap-1">
-              <FaMailBulk className="text-[1rem]" />
+              <IoMdMail className="text-[1rem]" />
               support@thesurvivorslounge.com
             </p>
             <p className="[word-spacing:0.1em] mb-1 tracking-wide md:text-[1.1rem] md:mb-2 flex items-center gap-1">
@@ -34,7 +41,7 @@ const Footer = () => {
           </address>
         </div>
 
-        <div className="flex gap-4 md:mt-4 md:absolute md:bottom-0 md:left-45">
+        <div className="flex gap-4 md:mt-4 md:absolute md:bottom-0 md:gap-6 md:left-0">
           <a
             href="https://www.linkedin.com/"
             target="_blank"
