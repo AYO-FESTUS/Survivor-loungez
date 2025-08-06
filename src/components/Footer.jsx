@@ -10,7 +10,7 @@ import { FaLocationPin } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#B89B5E] text-black py-6 w-full h-fit flex flex-col items-center">
+    <footer className="bg-[#B89B5E] text-white py-6 w-full h-fit flex flex-col items-center">
       {/* <footer className="w-full px-4 border-2 h-fit flex flex-col items-center gap-6 relative md:pb-10 md:justify-center"> */}
         <div className="w-full flex h-fit md:w-fit">
           {/* <img
@@ -75,7 +75,8 @@ const Footer = () => {
 
         {/* </div> */}
       {/* </footer> */}
-      <hr className="w-[90%] bg-black/80 mt-6 mb-2 " />
+      <br /><br />
+      
       <div className="w-full h-fit md:flex md:justify-center md:items-center md:gap-6">
       <div className="flex justify-center gap-4 text-sm md:text-[1.1rem] md:self-start md:pl-16 md:flex md:gap-6">
         <a
@@ -92,6 +93,8 @@ const Footer = () => {
           Safeguarding Policy
         </a>
       </div>
+
+      
       <p className="font-semibold text-center md:text-xl">
         &copy; {new Date().getFullYear()} The Survivors Lounge CIC
       </p>

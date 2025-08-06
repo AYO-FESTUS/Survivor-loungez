@@ -11,7 +11,7 @@ const Subscribe = () => {
   };
 
   return (
-    <div className="w-full max-w-xl mx-auto px-6 py-10 rounded shadow bg-black text-center">
+    <div className="w-full max-w-xl mx-auto px-6 py-10 rounded shadow bg-gray-900 text-center">
       <div className="mb-6">
         <h2 className="text-3xl sm:text-4xl font-bold text-[#B89B5E] mb-2">
           Subscribe to Our Newsletter

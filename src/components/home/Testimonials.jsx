@@ -16,7 +16,7 @@ const TestimonialCarousel = () => {
   };
 
   return (
-    <div className="w-full max-w-xl mx-auto bg-white dark:bg-black rounded-lg shadow p-6 flex flex-col items-center">
+    <div className="w-full max-w-xl mx-auto bg-gray-900 dark:bg-black rounded-lg shadow p-6 flex flex-col items-center">
       <AnimatePresence
         mode="wait"
         initial={false}
@@ -29,14 +29,14 @@ const TestimonialCarousel = () => {
           transition={{ duration: 0.4, ease: "easeInOut" }}
           className="w-full flex flex-col items-center"
         >
-          <p className="text-lg italic text-gray-700 dark:text-gray-200 mb-4">
+          <p className="text-lg italic text-[#B89B5E]  dark:text-gray-200 mb-4">
             "{testimonials[index].text}"
           </p>
           <div className="flex flex-col items-center">
             <span className="font-bold text-[#B89B5E]">
               {testimonials[index].name}
             </span>
-            <span className="text-sm text-gray-500">
+            <span className="text-sm text-white">
               {testimonials[index].role}
             </span>
           </div>

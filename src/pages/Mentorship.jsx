@@ -6,19 +6,19 @@ import Subscribe from "../components/Subscribe";
 
 const Mentorship = () => {
   return (
-    <section className="w-full min-h-screen flex flex-col items-center bg-black">
+    <><section className="w-full min-h-screen flex flex-col items-center bg-black">
       <div className="relative w-full h-52 bg-cover bg-no-repeat bg-center bg-[url('/images/mentors.jpg')] md:h-96">
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
         <div className="relative z-20 flex flex-col items-center justify-center h-full px-4 text-center text-white max-w-3xl mx-auto">
           <h1 className="text-4xl sm:text-3xl font-bold mb-4 md:text-5xl">
             A Stronger You, With Support
           </h1>
-         
-            <h2 className="text-base sm:text-lg md:text-xl font-medium mb-6 tracking-wider">
-             You don't have to walk alone
-            </h2>
-            </div>
-        
+
+          <h2 className="text-base sm:text-lg md:text-xl font-medium mb-6 tracking-wider">
+            You don't have to walk alone
+          </h2>
+        </div>
+
       </div>
 
       <div className="w-full px-8 py-10 flex items-center justify-center gap-10">
@@ -26,8 +26,7 @@ const Mentorship = () => {
           src="/images/ment.jpeg"
           alt="mentorship session"
           className="hidden md:block w-[43%] h-[18rem]"
-          loading="lazy"
-        />
+          loading="lazy" />
         <div className="md:w-[43%] py-10 relative">
           <FaQuoteLeft className="text-4xl text-[#B89B5E] absolute left-0 top-12 transform -translate-y-1/2" />
           <p className="text-lg text-gray-100 max-w-2xl mx-auto px-4 py-8 relative z-10 [word-spacing:0.2em] tracking-wider">
@@ -54,8 +53,7 @@ const Mentorship = () => {
             <img
               className="w-full h-40 rounded-lg"
               src={duty.img}
-              alt=""
-            />
+              alt="" />
             <h4 className="font-semibold mt-4 text-lg [word-spacing:0.1em] tracking-wide">
               {duty.title}
             </h4>
@@ -101,8 +99,15 @@ const Mentorship = () => {
           })}
         </div>
       </div>
-      <Subscribe />
-    </section>
+
+    </section><section className="bg-gray-900">
+        <div>
+          <Subscribe />
+        </div>
+      </section></>
+
+      
+      
   );
 };
 

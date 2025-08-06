@@ -74,9 +74,9 @@ const Blog = () => {
   ];
 
   return (
-    <div className="w-full bg-black">
+    <div className="w-full bg-white">
       {/* Hero Section */}
-      <section className="relative w-full h-56 md:h-96">
+      <section className="relative w-full h-[500px] md:h-96">
         <img
           src="/hero imag/Premium Photo _ Group of people holding hand toget.jpeg"
           alt="People"
@@ -95,7 +95,7 @@ const Blog = () => {
 
       {/* Blog Posts Section */}
       <div className="container mx-auto w-full px-4 py-8">
-        <h1 className="text-4xl font-bold my-6 text-center text-[#B89B5E]">
+        <h1 className="text-5xl font-bold my-6 text-center text-gray-900">
           Blog Stories
         </h1>
 
@@ -107,23 +107,24 @@ const Blog = () => {
           const isExpanded = expandedIndex === index;
 
           return (
+          
             <div
               key={index}
-              className="bg-[#B89B5E]/70 shadow-md rounded p-4 mb-6 border-2"
+              className="bg-[#B89B5E]/70 shadow-md rounded p-4 mb-6 border-1"
             >
               {post.imageUrl && (
                 <img
                   src={post.imageUrl}
                   alt={post.title}
-                  className="w-full object-cover rounded mb-4"
+                  className="w-full h-[880px] object-cover rounded mb-4"
                 />
               )}
 
-              <h2 className="text-xl font-semibold mb-3 text-center text-white">
+              <h2 className="text-3xl font-semibold mb-3 text-center text-gray-900">
                 {post.title}
               </h2>
 
-              <div className="mt-2 text-black">
+              <div className="mt-1 text-1xl text-black">
                 {!isExpanded ? (
                   <>
                     {previewWords}
@@ -139,7 +140,7 @@ const Blog = () => {
               {hasMore && (
                 <div className="flex justify-end mt-2">
                   <button
-                    className="flex items-center text-gray-100 focus:outline-none"
+                    className="flex items-center text-gray-900 focus:outline-none"
                     onClick={() => toggleExpand(index)}
                   >
                     <span className="text-sm font-medium mr-2">
@@ -159,29 +160,29 @@ const Blog = () => {
 
         {/* Helpline Section */}
         <section className="w-full mb-12">
-          <div className="relative w-full h-[100vh] mb-8">
+          <div className="relative w-full h-[500px] mb-8">
             <img
               src="\blog imag\Servicio al cliente_ qué es y cómo brindar una ate.jpeg"
               alt="Emergency helplines support"
-              className="absolute inset-0 w-full h-full object-cover"
+              className="absolute inset-0 w-full h-[500px] object-cover"
             />
             <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
               <h2 className="text-white text-4xl font-bold text-center px-4">
-                Key Helplines & Emergency Contacts
+                Helplines & Emergency Contacts
               </h2>
             </div>
           </div>
 
           <div className="max-w-4xl mx-auto px-4">
             <table className="min-w-full border border-gray-300">
-              <thead className="bg-[#B89B5E] text-white">
+              <thead className="bg-[#B89B5E] text-gray-900">
                 <tr>
                   <th className="py-3 px-4 text-left">Organisation</th>
                   <th className="py-3 px-4 text-left">Service</th>
                   <th className="py-3 px-4 text-left">Contact</th>
                 </tr>
               </thead>
-              <tbody className="text-gray-100">
+              <tbody className="text-gray-900">
                 <tr className="border-t">
                   <td className="py-3 px-4 font-bold">
                     National Domestic Abuse Helpline (Refuge)
@@ -193,7 +194,7 @@ const Blog = () => {
                     </a>
                   </td>
                 </tr>
-                <tr className="border-t">
+                <tr className="border-t text-gray-900">
                   <td className="py-3 px-4 font-bold">
                     Rights of Women – Legal Advice
                   </td>
@@ -213,7 +214,7 @@ const Blog = () => {
                   </td>
                   <td className="py-3 px-4">Local confidential support</td>
                   <td className="py-3 px-4">
-                    <a href="tel:08002540909" className="text-white-600 underline">
+                    <a href="tel:08002540909" className="text-gray-900 underline">
                       0800 254 0909
                     </a>
                   </td>
@@ -224,7 +225,7 @@ const Blog = () => {
                   </td>
                   <td className="py-3 px-4">Legal advice for irregular migrants</td>
                   <td className="py-3 px-4">
-                    <a href="tel:02075537470" className="text-white-600 underline">
+                    <a href="tel:02075537470" className="text-gray-900 underline">
                       020 7553 7470
                     </a>
                   </td>
