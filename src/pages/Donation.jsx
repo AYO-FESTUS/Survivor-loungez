@@ -9,7 +9,8 @@ const Donation = () => {
           <h2 className="font-bold text-4xl mt-4 text-gray-100 text-center md:text-5xl">
             Support the Journey of Healing
           </h2>
-          <p className="mt-2 md:mt-4 text-white text-lg [word-spacing:0.2em] tracking-wider">
+          <p className="mt-2 md:mt-4 text-bold text-white text-lg [word-spacing:0.2em] tracking-wider">
+           
             Your donation makes a difference
           </p>
         </div>

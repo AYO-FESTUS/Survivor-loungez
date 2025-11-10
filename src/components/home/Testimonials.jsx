@@ -36,7 +36,7 @@ const TestimonialCarousel = () => {
             <span className="font-bold text-[#B89B5E]">
               {testimonials[index].name}
             </span>
-            <span className="text-sm text-white">
+            <span className="text-sm text-black">
               {testimonials[index].role}
             </span>
           </div>

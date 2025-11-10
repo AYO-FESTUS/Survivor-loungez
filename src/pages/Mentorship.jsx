@@ -43,7 +43,7 @@ const Mentorship = () => {
           </div>
         </div>
 
-        <h3 className="font-bold text-2xl text-[#B89B5E]">What Mentors Do</h3>
+        <h3 className="font-bold text-2xl md:text-3xl text-center mb-6 text-[#B89B5E]">What Mentors Do</h3>
 
         <div className="w-full h-fit px-4 mt-6 sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {mentorDuties.map((duty) => (
@@ -67,13 +67,13 @@ const Mentorship = () => {
           Get a Mentor
         </button>
 
-        <p className="my-4 text-center px-2 text-black ">
+        <p className="my-6 text-center px-2 text-black ">
           Interested in becoming a mentor to help others find their way?{" "}
         </p>
         <a className="no-underline text-[#B89B5E] font-italic hover:underline cursor-pointer mb-2">
           Become a Volunteer
         </a>
-        <h3 className="font-bold mt-4 text-2xl text-center text-[#B89B5E] ">
+        <h3 className="font-bold text-2xl md:text-3xl text-center mb-6 text-[#B89B5E] ">
           Our Skill Enhancement Program
         </h3>
         <div className="w-full h-fit px-8 mt-2">
@@ -82,7 +82,7 @@ const Mentorship = () => {
             sessions to help survivors gain confidence, employment readiness and
             financial independence.
           </p>
-          <p className="text-gray-600 mt-2">What to expect:</p>
+          <p className="font-bold text-2xl md:text-2xl text-center">What to expect</p>
 
           <div className="w-full h-fit md:grid grid-cols-3 mt-6 gap-4 ">
             {skillEnhancements.map((enhancement) => {
