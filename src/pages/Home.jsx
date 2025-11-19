@@ -78,6 +78,9 @@ const Home = () => {
             transition={{ duration: 1 }}
             className="text-center text-white max-w-3xl"
           >
+            <br />
+            <br />
+            <br />
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 leading-tight">
               Rebuilding Lives Beyond Crisis
             </h1>
@@ -97,14 +100,21 @@ const Home = () => {
               >
                 Partner With Us
               </a>
+
+              <br />
+              <br />
             </div>
+
+        
           </motion.div>
         </div>
       </section>
+      
 
       {/* About Section */}
-      <section className="py-16 bg-gray-100">
-        <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+      <section className="py-15 bg-gray-100">
+      
+        <div className="max-w-4xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -118,7 +128,7 @@ const Home = () => {
               loading="lazy"
             />
           </motion.div>
-
+ 
           <motion.div
             ref={counterRef}
             initial={{ opacity: 0, x: 100 }}
